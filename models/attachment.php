@@ -44,18 +44,11 @@ class JSON_API_Attachment {
     $home = get_bloginfo('url');
     foreach ($sizes as $size) {
       list($url, $width, $height) = wp_get_attachment_image_src($this->id, $size);
-      $filename = ABSPATH . substr($url, strlen($home) + 1);
-      if (file_exists($filename)) {
-        list($measured_width, $measured_height) = getimagesize($filename);
-        if ($measured_width == $width &&
-            $measured_height == $height) {
-          $this->images[$size] = (object) array(
-            'url' => $url,
-            'width' => $width,
-            'height' => $height
-          );
-        }
-      }
+      $this->images[$size] = (object) array(
+        'url' => $url,
+        'width' => $width,
+        'height' => $height
+      );
     }
   }
   
