@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: JSON API (SBL CUSTOM)
+Plugin Name: JSON API (SBL 1.0)
 Plugin URI: http://wordpress.org/plugins/json-api/
 Description: A RESTful API for WordPress. (custom version for SBL: https://github.com/nmatthews333/wp-json-api)
 Version: 1.1.1
